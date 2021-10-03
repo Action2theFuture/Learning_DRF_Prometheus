@@ -21,9 +21,9 @@ services:
       replicas: 3
       resources:
         limits:
-          memory: 5M
+          memory: 10M
         reservations:
-          memory: 2M
+          memory: 10M
           cpus: "0.1"
       restart_policy:
         condition: on-failure
