@@ -36,6 +36,6 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./:./db.sqlite3
+      - ./=./db.sqlite3
     deploy:
       replicas: 3
