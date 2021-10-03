@@ -19,6 +19,8 @@ services:
       - sqlite3
     deploy:
       replicas: 3
+      placement:
+        constraints: [node.roll==leader]
       resources:
         limits:
           memory: 10M
