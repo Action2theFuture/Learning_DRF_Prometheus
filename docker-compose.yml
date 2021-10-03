@@ -5,8 +5,6 @@ services:
     # docekrfile 경로
     image: tree0204/drf_tuto:0.1.0
     build: ./
-    volumes:
-      - /service=./
     command:
       - bash
       - -c
