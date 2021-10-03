@@ -18,9 +18,6 @@ services:
     depends_on:
       - sqlite3
     deploy:
-      placement:
-        constraints:
-          - node.role==manager
       replicas: 3
       resources:
         limits:
