@@ -20,7 +20,7 @@ services:
     deploy:
       replicas: 3
       placement:
-        constraints: [node.roll==leader]
+        constraints: [node.role==leader]
       resources:
         limits:
           memory: 10M
