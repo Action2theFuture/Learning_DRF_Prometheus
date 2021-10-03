@@ -20,7 +20,7 @@ services:
     deploy:
       replicas: 3
       placement:
-        constraints: [node.role==manager]
+        constraints: [node.hostname==ip-172-31-33-220]
       resources:
         limits:
           memory: 10M
