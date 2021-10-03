@@ -6,7 +6,7 @@ services:
     image: tree0204/drf_tuto:latest
     build: ./
     volumes:
-      - ./:/usr/src/app
+      - /usr/src/app
     command:
       - bash
       - -c
