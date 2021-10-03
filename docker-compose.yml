@@ -8,6 +8,8 @@ services:
     volumes:
       - /service=./
     command:
+      - bash
+      - -c
       - |
         python manage.py collectstatic --no-input
         python manage.py migrate
