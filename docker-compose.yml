@@ -17,6 +17,8 @@ services:
       - 8000:8000
     depends_on:
       - sqlite3
+    networks:
+      - web_network
     deploy:
       replicas: 3
       placement:
@@ -38,5 +40,10 @@ services:
     tty: true
     volumes:
       - /db=./db.sqlite3
+    networks:
+      - web_network
     deploy:
       replicas: 3
+
+networks:
+  web_network:
