@@ -14,7 +14,7 @@ services:
         python manage.py collectstatic --no-input
         python manage.py migrate
     ports:
-      - 8000:8000
+      - "8000:8000"
     depends_on:
       - sqlite3
     deploy:
@@ -46,7 +46,7 @@ services:
   Swarm_Cluster:
     image: dockersamples/visualizer
     ports:
-      - 8881:8000
+      - "8881:8000"
     deploy:
       replicas: 1
       placement:
