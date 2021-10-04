@@ -6,7 +6,7 @@ services:
     image: tree0204/drf_tuto:0.1.0
     build: ./
     volumes:
-      - /usr/src/app
+      - ./:./
     command:
       - bash
       - -c
@@ -45,6 +45,9 @@ services:
 
   Swarm_Cluster:
     image: dockersamples/visualizer
+    volumes:
+      - type: bind
+        target: /var/run/docker.sock
     ports:
       - "8881:8000"
     deploy:
