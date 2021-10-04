@@ -46,8 +46,7 @@ services:
   Swarm_Cluster:
     image: dockersamples/visualizer
     volumes:
-      - type: bind
-        target: /var/run/docker.sock
+      - /var/run/docker.sock
     ports:
       - "8881:8000"
     deploy:
