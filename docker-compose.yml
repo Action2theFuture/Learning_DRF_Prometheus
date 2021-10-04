@@ -13,8 +13,8 @@ services:
         python manage.py collectstatic --no-input
         python manage.py migrate
     ports:
-      - target: 8080
-        published: 8080
+      - target: 8000
+        published: 8000
         protocol: tcp
         mode: host
     deploy:
