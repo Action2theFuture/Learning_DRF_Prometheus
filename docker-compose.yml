@@ -17,8 +17,6 @@ services:
       - 8000:8000
     depends_on:
       - sqlite3
-    networks:
-      - network
     deploy:
       replicas: 2
       placement:
@@ -40,12 +38,7 @@ services:
     tty: true
     volumes:
       - /db=./db.sqlite3
-    networks:
-      - network
     deploy:
       replicas: 2
       placement:
         constraints: [node.hostname==ip-172-31-36-209]
-
-networks:
-  network:
