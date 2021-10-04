@@ -6,7 +6,7 @@ services:
     image: tree0204/drf_tuto:0.1.0
     build: ./
     volumes:
-      - /service=./
+      - /usr/src/app
     command:
       - bash
       - -c
@@ -20,7 +20,7 @@ services:
     networks:
       - network
     deploy:
-      replicas: 3
+      replicas: 2
       placement:
         constraints: [node.hostname==ip-172-31-33-220]
       resources:
@@ -32,7 +32,7 @@ services:
       restart_policy:
         condition: on-failure
         delay: 2s
-        max_attempts: 3
+        max_attempts: 2
 
   sqlite3:
     image: nouchka/sqlite3:latest
@@ -43,7 +43,7 @@ services:
     networks:
       - network
     deploy:
-      replicas: 3
+      replicas: 2
       placement:
         constraints: [node.hostname==ip-172-31-36-209]
 
