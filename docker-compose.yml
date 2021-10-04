@@ -13,8 +13,8 @@ services:
         python manage.py collectstatic --no-input
         python manage.py migrate
     ports:
-      - target: 8000
-        published: 8000
+      - target: "8000"
+        published: "8000"
         mode: host
     deploy:
       replicas: 2
