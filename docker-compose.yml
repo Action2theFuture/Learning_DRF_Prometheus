@@ -14,8 +14,6 @@ services:
         python manage.py migrate
     ports:
       - "8000:8000"
-    depends_on:
-      - sqlite3
     deploy:
       replicas: 2
       placement:
