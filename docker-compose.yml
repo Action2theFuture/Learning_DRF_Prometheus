@@ -42,3 +42,10 @@ services:
       replicas: 2
       placement:
         constraints: [node.role==worker]
+
+  Swarm_Cluster:
+    image: dockersamples/visualizer
+    ports:
+      - 8881:8000
+    placement:
+      constraints: [node.role==manager]
