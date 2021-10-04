@@ -12,7 +12,7 @@ services:
     networks:
       - network
     deploy:
-      replicas: 1
+      replicas: 3
       placement:
         constraints: [node.role==manager]
       resources:
