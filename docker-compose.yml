@@ -52,7 +52,7 @@ services:
       - /data/prometheus:/etc/prometheus
       - /data/prometheus/data:/prometheus
     ports:
-      - 8881:9099
+      - 9099:9099
     networks:
       - network
 
