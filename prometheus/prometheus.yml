@@ -7,9 +7,10 @@ global:
 # Alertmanager configuration
 alerting:
   alertmanagers:
+  - sheme: http
     - static_configs:
         - targets:
-          # - alertmanager:9093
+          #- alertmanager:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
@@ -26,11 +27,18 @@ scrape_configs:
 
   # Exporter 설정
   - job_name: "server"
+
     scrape_interval: 10s
-    static_configs:
-      - targets: ["54.180.179.246:8000"]
+    dns_sd_configs:
+      - names:
+          - "tasks.cadvisor"
+        type: "A"
+        port: 8000
 
   - job_name: "jenkins"
 
-    static_configs:
-      - targets: ["54.180.179.246:8080"]
+    dns_sd_configs:
+      - names:
+          - "tasks.cadvisor"
+        type: "A"
+        port: 8080
