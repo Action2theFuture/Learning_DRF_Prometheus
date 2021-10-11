@@ -25,17 +25,12 @@ scrape_configs:
       - targets: ["0.0.0.0:9099"]
 
   # Exporter 설정
-  - job_name: "prom1"
+  - job_name: "server"
     scrape_interval: 10s
     static_configs:
-      - targets: ["prom1.danawa.com:9110", "prom1.danawa.com:9111"]
+      - targets: ["0.0.0.0:8000"]
 
-  - job_name: "prom2"
-
-    static_configs:
-      - targets: ["prom2.danawa.com:9110"]
-
-  - job_name: "prom3"
+  - job_name: "jenkins"
 
     static_configs:
-      - targets: ["prom3.danawa.com:9110"]
+      - targets: ["0.0.0.0:8080"]
