@@ -61,7 +61,7 @@ services:
     ports:
       - 8881:9099
     networks:
-    - network
+      - network
 
   Swarm_Cluster:
     image: dockersamples/visualizer
