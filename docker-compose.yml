@@ -55,6 +55,9 @@ services:
       - "--storage.tsdb.retention.time=200h"
     ports:
       - 9099:9099
+    links:
+      - service:service
+      - sqlite3:sqlite3
     networks:
       - network
 
