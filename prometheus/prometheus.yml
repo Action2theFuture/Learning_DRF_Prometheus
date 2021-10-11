@@ -7,7 +7,7 @@ global:
 # Alertmanager configuration
 alerting:
   alertmanagers:
-  - sheme: http
+    # - sheme: http
     - static_configs:
         - targets:
           #- alertmanager:9093
