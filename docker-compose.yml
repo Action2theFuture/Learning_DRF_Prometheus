@@ -49,8 +49,8 @@ services:
       - "--storage.tsdb.retention.time=200h"
       - "--web.enable-lifecycle"
     volumes:
-      - /data/prometheus:./prometheus
-      - /data/prometheus/data:./prometheus/data
+      - /data/prometheus:/etc/prometheus
+      - /data/prometheus/data:/prometheus
     ports:
       - 9099:9099
     networks:
