@@ -1,5 +1,8 @@
 version: "3"
 
+volumes:
+  prometheus_data: {}
+
 services:
   server:
     # docekrfile 경로
