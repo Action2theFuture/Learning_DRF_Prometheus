@@ -6,7 +6,7 @@ volumes:
 services:
   server:
     # docekrfile 경로
-    build: ./
+    image: tree0204/drf_tuto:0.1.1
     volumes:
       - ./:/app
     ports:
